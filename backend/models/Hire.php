@@ -58,7 +58,7 @@ class Hire extends \yii\db\ActiveRecord
             'taking_date' => 'Дата выдачи',
             'return_date' => 'Дата возврата (ГГГГ-ММ-ДД)',
             'hire_price' => 'Цена проката (ед.)',
-            'fact_date' => 'Дата фактического возврата',
+            'fact_date' => 'Дата фактического возврата (ГГГГ-ММ-ДД)',
         ];
     }
 
