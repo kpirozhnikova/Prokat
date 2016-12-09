@@ -31,7 +31,7 @@ class VideocassetteController extends Controller
 		if ($videocassette) {
 			return $this->render('view', ['videocassette' => $videocassette]);
 		} else {
-			return 'Фильм не найден';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 	} 
 }
