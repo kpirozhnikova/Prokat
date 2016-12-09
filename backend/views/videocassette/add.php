@@ -6,7 +6,7 @@ use yii\helpers\ArrayHelper;
 <?php $form= ActiveForm::begin();?>
 <?=$form->field($videocassette, 'name_videocassette')?>
 <?=$form->field($videocassette, 'year')?>
-<?=$form->field($videocassette, 'description')?>
+<?=$form->field($videocassette, 'description')->textArea(['rows' => '6'])?>
 <?=$form->field($videocassette, 'status')->checkBox()?>
 <button class="btn btn-primary" type="submit">
 Сохранить</button>
