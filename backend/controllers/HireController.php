@@ -50,7 +50,7 @@ class HireController extends Controller
 	public function actionEdit($id) {
 		$hire=Hire::findOne($id);
 		if (!$hire) {
-			return 'Запись не найдена';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		$videocassettes=Videocassette::find()->having('status=1') ->all();
 		$clients=Client::find()->all();
@@ -73,7 +73,7 @@ class HireController extends Controller
 	public function actionDelete($id){
 		$hire=Hire::findOne($id);
 		if (!$hire) {
-			return 'Запись не найдена';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		$hire->delete();
 		return $this->redirect(['hire/index']);
@@ -121,7 +121,7 @@ class HireController extends Controller
 	public function actionEditdebtor($id) {
 		$hire=Hire::findOne($id);
 		if (!$hire) {
-			return 'Запись не найдена';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		$videocassettes=Videocassette::find()->having('status=1') ->all();
 		$clients=Client::find()->all();
