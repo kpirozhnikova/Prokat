@@ -47,7 +47,7 @@ class VideocassetteController extends Controller
 	public function actionEdit($id) {
 		$videocassette=Videocassette::findOne($id);
 		if (!$videocassette) {
-			return 'Видеокассета не найдена';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 	
 		if (isset($_POST['Videocassette'])) {
@@ -62,7 +62,7 @@ class VideocassetteController extends Controller
 	public function actionDelete($id){
 		$videocassette=Videocassette::findOne($id);
 		if (!$videocassette) {
-			return 'Видеокассета не найдена';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		$videocassette->delete();
 		return $this->redirect(['videocassette/index']);
