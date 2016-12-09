@@ -40,7 +40,7 @@ class Hire extends \yii\db\ActiveRecord
             [['return_date'], 'date', 'format'=>'y-m-d', 'message'=>'Неверный формат даты'],
             [['fact_date'], 'date', 'format'=>'y-m-d', 'message'=>'Неверный формат даты'],
             [['taking_date', 'return_date', 'fact_date'], 'safe'],
-            [['hire_price'], 'number'],
+            [['hire_price'], 'number', 'message'=>'Неверный формат стоимости'],
             [['client_id'], 'exist', 'skipOnError' => true, 'targetClass' => Client::className(), 'targetAttribute' => ['client_id' => 'id']],
             [['videocassette_id'], 'exist', 'skipOnError' => true, 'targetClass' => Videocassette::className(), 'targetAttribute' => ['videocassette_id' => 'id']],
         ];
