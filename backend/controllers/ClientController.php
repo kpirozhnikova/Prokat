@@ -48,7 +48,7 @@ class ClientController extends Controller
 	public function actionEdit($id) {
 		$client=Client::findOne($id);
 		if (!$client) {
-			return 'Клиент не найден';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		
 		if (isset($_POST['Client'])) {
@@ -63,7 +63,7 @@ class ClientController extends Controller
 	public function actionDelete($id){
 		$client=Client::findOne($id);
 		if (!$client) {
-			return 'Клиент не найден';
+			throw new \yii\web\NotFoundHttpException('Запись не найдена');
 		}
 		$client->delete();
 		return $this->redirect(['client/index']);
