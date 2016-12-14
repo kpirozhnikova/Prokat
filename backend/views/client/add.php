@@ -2,7 +2,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\ArrayHelper;
 ?>
-<h2>Редактирование клиента</h2>
+<h2>Параметры клиента</h2>
 <?php $form= ActiveForm::begin();?>
 <?=$form->field($client, 'last_name')?>
 <?=$form->field($client, 'first_name')?>
