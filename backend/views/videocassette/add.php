@@ -2,7 +2,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\ArrayHelper;
 ?>
-<h2>Редактирование видеокассеты</h2>
+<h2>Параметры видеокассеты</h2>
 <?php $form= ActiveForm::begin();?>
 <?=$form->field($videocassette, 'name_videocassette')?>
 <?=$form->field($videocassette, 'year')?>
